@@ -1,15 +1,16 @@
 {
-  "name": "mern_shopping_list",
+  "name": "node_react",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "start": "cross-env NODE_ENV=production MONGO_URL=yourMongoURL node server.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
