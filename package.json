@@ -6,7 +6,7 @@
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start": "npm run start:prod",
     "start:dev": "nodemon server.js",
     "prestart:prod": "cd client && yarn build ",
     "start:prod": "node server.js",
