@@ -1,0 +1,13 @@
+.jumbotron {
+    height: 400px;
+    text-align: center;
+    background-color: lightblue;
+    
+}
+.display-4 {
+    font-size: 100px
+}
+
+.lead {
+    font-size: 30px;
+}
