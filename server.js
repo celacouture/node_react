@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/over_dont");
 // mongoose.connect(db)
 // .then(()=>console.log('mongoDB connected...'))
 // .catch(err=>console.log(err));
-
+app.use('/api/alerts', alerts);
 app.get("*", (req, res) => {
   res.sendFile(process.cwd() + "/client/build/index.html");
 })
@@ -27,7 +27,7 @@ app.get("*", (req, res) => {
 
 
 
-app.use('/api/alerts', alerts);
+
 
 const port=process.env.PORT || 8000;
 
