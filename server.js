@@ -10,8 +10,9 @@ const app =express();
 app.use(bodyParser.json());
 app.use( express.static('client/build') );
 
-const db=require('./config/keys').mongoURI;
+// const db=require('./config/keys').mongoURI;
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/over_dont");
 // mongoose.connect(db)
 // .then(()=>console.log('mongoDB connected...'))
 // .catch(err=>console.log(err));
