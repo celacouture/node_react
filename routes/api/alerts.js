@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
 //item model
-const Alert=require('./../../models/Alert.js');
+const Alert=require('../../models/Alert.js');
 
 router.get('/', (req,res)=>{
   Alert.find()
